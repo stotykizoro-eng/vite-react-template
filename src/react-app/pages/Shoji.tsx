@@ -43,8 +43,8 @@ export default function Shoji() {
         <div className="price-cat-title">🏯 障子の張り替え</div>
         <table className="price-table">
           <tbody>
-            <tr><td>障子1枚（普通紙）</td><td className="price">¥4,500〜</td></tr>
-            <tr><td>障子4枚以上まとめて</td><td className="price">¥4,000〜/枚</td></tr>
+            <tr><td>障子1枚（普通紙）</td><td className="price">¥4,900〜</td></tr>
+            <tr><td>障子4枚以上まとめて</td><td className="price">¥4,500〜/枚</td></tr>
             <tr className="note"><td colSpan={2}>※和紙の種類（強化和紙・プラスチック障子紙等）により変動</td></tr>
           </tbody>
         </table>
@@ -54,8 +54,8 @@ export default function Shoji() {
         <div className="price-cat-title">📜 襖の張り替え</div>
         <table className="price-table">
           <tbody>
-            <tr><td>襖1枚</td><td className="price">¥6,000〜</td></tr>
-            <tr><td>襖4枚以上まとめて</td><td className="price">¥5,500〜/枚</td></tr>
+            <tr><td>襖1枚</td><td className="price">¥7,500〜</td></tr>
+            <tr><td>襖4枚以上まとめて</td><td className="price">¥6,500〜/枚</td></tr>
             <tr className="note"><td colSpan={2}>※柄・グレードにより変動。まとめほどお得</td></tr>
           </tbody>
         </table>
