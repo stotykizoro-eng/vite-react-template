@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Yushitsu() {
   return (
     <PageLayout>
+      <MetaTags
+        title="浴室ドア交換｜宮口板硝子 川口市 工期最短1日"
+        description="川口市の浴室ドア交換専門。簡易カバー工法で大がかりな解体不要・工期最短1日。古いドアを新品に。見積無料。☎090-8563-7982"
+        path="/yushitsu"
+      />
       <BackHome />
 
       <PageHero

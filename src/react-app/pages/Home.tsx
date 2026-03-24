@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import Footer from '../components/Footer';
+import MetaTags from '../components/MetaTags';
+import LocalBusinessSchema from '../components/LocalBusinessSchema';
 import { TEL, TEL_DISPLAY } from '../constants';
 
 export default function Home() {
@@ -9,6 +11,12 @@ export default function Home() {
 
   return (
     <PageLayout>
+      <MetaTags
+        title="宮口板硝子｜川口市のガラス修理・網戸張替 創業50年"
+        description="川口市木曽呂のガラス修理・網戸張替専門店。創業50年。ガラス1枚から当日対応。見積無料。☎090-8563-7982"
+        path="/"
+      />
+      <LocalBusinessSchema />
       <div className="top-bar">📍 川口市木曽呂発・さいたま市・東京都内 対応中 ｜ 見積もり完全無料</div>
 
       <header className="header">

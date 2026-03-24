@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Sash() {
   return (
     <PageLayout>
+      <MetaTags
+        title="窓・サッシの修理｜宮口板硝子 川口市"
+        description="川口市の窓・サッシ修理専門。重い・ガタガタ・閉まらない。調整のみなら無料〜。戸車交換・クレセント錠交換も対応。☎090-8563-7982"
+        path="/sash"
+      />
       <BackHome />
 
       <PageHero

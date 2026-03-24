@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Kagi() {
   return (
     <PageLayout>
+      <MetaTags
+        title="鍵の取替・修理｜宮口板硝子 川口市"
+        description="川口市の鍵の取替・修理専門。玄関鍵・防犯錠・補助錠・窓の鍵など対応。防犯性向上も。見積無料。☎090-8563-7982"
+        path="/kagi"
+      />
       <BackHome />
 
       <PageHero

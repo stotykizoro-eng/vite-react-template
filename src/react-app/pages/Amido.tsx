@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Amido() {
   return (
     <PageLayout>
+      <MetaTags
+        title="網戸の張り替え｜宮口板硝子 川口市 1枚から対応"
+        description="川口市の網戸張替専門。1枚から対応。猫の爪傷・穴・花粉対策ネットへの交換もおまかせ。見積無料。☎090-8563-7982"
+        path="/amido"
+      />
       <BackHome />
 
       <PageHero
