@@ -1,18 +1,36 @@
-/* ===== トップバー ===== */
+/* =============================================
+   トップバー
+   ============================================= */
 .top-bar {
   background: var(--navy);
   color: var(--yellow);
   text-align: center;
   padding: 8px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
-/* ===== ヘッダー ===== */
+@media (min-width: 768px) {
+  .top-bar {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
+
+/* =============================================
+   ヘッダー
+   ============================================= */
 .header {
   background: var(--navy);
   padding: 14px 20px 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-left {
+  display: contents; /* スマホは中身をそのままflowに展開 */
 }
 
 .header-logo {
@@ -33,10 +51,50 @@
   color: var(--navy);
   font-size: 13px;
   font-weight: 900;
-  padding: 6px 0;
+  padding: 6px 20px;
+  width: 100%;
+  text-align: center;
 }
 
-/* ===== フッター ===== */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 18px 40px 0;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-logo {
+    font-size: 14px;
+  }
+
+  .header-name {
+    font-size: 44px;
+    margin-top: 2px;
+  }
+
+  .header-tagline {
+    margin-top: 0;
+    width: auto;
+    border-radius: 6px 6px 0 0;
+    font-size: 14px;
+    padding: 10px 28px;
+    align-self: flex-end;
+    flex-shrink: 0;
+  }
+}
+
+/* =============================================
+   フッター（通常）
+   ============================================= */
 .footer {
   background: var(--navy);
   color: #fff;
@@ -93,7 +151,27 @@
   padding-top: 10px;
 }
 
-/* サービスページ用フッター（コンパクト） */
+@media (min-width: 768px) {
+  .footer {
+    padding: 36px 40px 24px;
+  }
+
+  .footer-name {
+    font-size: 26px;
+  }
+
+  .footer address {
+    font-size: 15px;
+  }
+
+  .footer-hours {
+    font-size: 13px;
+  }
+}
+
+/* =============================================
+   フッター（コンパクト）
+   ============================================= */
 .footer-sm {
   background: var(--navy);
   color: #fff;
@@ -102,7 +180,10 @@
 }
 
 .footer-sm .footer-name {
+  color: var(--yellow);
   font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 4px;
 }
 
 .footer-sm address {
@@ -112,7 +193,15 @@
   line-height: 2;
 }
 
-/* ===== 固定電話バー ===== */
+@media (min-width: 768px) {
+  .footer-sm {
+    padding: 28px 40px 18px;
+  }
+}
+
+/* =============================================
+   固定電話バー（下部ナビ）
+   ============================================= */
 .phone-fix {
   position: fixed;
   bottom: 0;
@@ -144,4 +233,436 @@
   display: block;
   font-weight: 700;
   opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .phone-fix {
+    max-width: 960px;
+    padding: 12px 0;
+    font-size: 24px;
+  }
+
+  .phone-fix small {
+    font-size: 13px;
+  }
+}
+
+/* =============================================
+   緊急バー
+   ============================================= */
+.emergency {
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 18px 16px;
+}
+
+.emer-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.emer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--red);
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 6px;
+  padding: 12px 28px;
+  text-decoration: none;
+}
+
+.emer-sub {
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+  .emergency {
+    padding: 22px 40px;
+  }
+
+  .emer-title {
+    font-size: 20px;
+  }
+
+  .emer-btn {
+    font-size: 24px;
+    padding: 14px 36px;
+  }
+
+  .emer-sub {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* =============================================
+   戻るボタン
+   ============================================= */
+.back-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--off);
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 16px;
+  text-decoration: none;
+  border-bottom: 2px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  .back-home {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}
+
+/* =============================================
+   ページヒーロー（サービスページ）
+   ============================================= */
+.page-hero {
+  background: linear-gradient(135deg, #001228, #002a5e);
+  color: #fff;
+  padding: 28px 16px 24px;
+  text-align: center;
+}
+
+.page-icon {
+  font-size: 60px;
+  margin-bottom: 8px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--yellow);
+  margin-bottom: 6px;
+}
+
+.page-sub {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .page-hero {
+    padding: 40px 48px 36px;
+  }
+
+  .page-icon {
+    font-size: 72px;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  .page-sub {
+    font-size: 17px;
+  }
+}
+
+/* =============================================
+   こんな時セクション
+   ============================================= */
+.scene-section {
+  padding: 16px 14px 20px;
+}
+
+.scene-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--yellow);
+}
+
+.scene-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scene-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--off);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.s-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (min-width: 768px) {
+  .scene-section {
+    padding: 20px 32px 24px;
+  }
+
+  .scene-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+/* =============================================
+   料金テーブル
+   ============================================= */
+.price-cat-wrap {
+  margin: 0 14px 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.price-cat-title {
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 15px;
+  font-weight: 900;
+  padding: 9px 14px;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table td {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table tr:nth-child(even) td {
+  background: #f9f9f9;
+}
+
+.price-table .price {
+  text-align: right;
+  font-weight: 900;
+  color: var(--red);
+  white-space: nowrap;
+}
+
+.price-table .price-free {
+  text-align: right;
+  font-weight: 900;
+  color: #2e7d32;
+  white-space: nowrap;
+}
+
+.price-table .note td {
+  font-size: 11px;
+  color: #888;
+  background: #f5f5f5 !important;
+  padding: 5px 12px;
+}
+
+@media (min-width: 768px) {
+  .price-cat-wrap {
+    margin: 0 32px 20px;
+  }
+
+  .price-table td {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+}
+
+/* =============================================
+   込み込みボックス
+   ============================================= */
+.komikomi-box {
+  margin: 0 14px 20px;
+  background: var(--navy);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.komikomi-head {
+  color: var(--yellow);
+  font-size: 15px;
+  font-weight: 900;
+  padding: 11px 14px;
+  background: rgba(255, 193, 7, 0.1);
+  border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.komikomi-body {
+  padding: 14px;
+  color: #fff;
+}
+
+.komikomi-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.ktag {
+  background: var(--red);
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.komikomi-body p {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .komikomi-box {
+    margin: 0 32px 24px;
+  }
+}
+
+/* =============================================
+   FAQ（サービスページ用）
+   ============================================= */
+.faq-section {
+  padding: 14px 14px 20px;
+}
+
+.faq-item {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.faq-item summary {
+  background: var(--navy);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 16px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq-item summary::before {
+  content: 'Q';
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 900;
+  font-size: 13px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.faq-item p {
+  padding: 13px 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (min-width: 768px) {
+  .faq-section {
+    padding: 14px 32px 24px;
+  }
+}
+
+/* =============================================
+   ページ内電話ボタン
+   ============================================= */
+.page-tel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 8px 14px 20px;
+  text-decoration: none;
+}
+
+.page-tel-btn small {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 768px) {
+  .page-tel-btn {
+    margin: 10px 32px 24px;
+    font-size: 24px;
+    padding: 18px 28px;
+  }
+}
+
+/* =============================================
+   情報ボックス / 注意ボックス
+   ============================================= */
+.info-box {
+  background: #e3f2fd;
+  border: 2px solid #1565c0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0 14px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0d47a1;
+  line-height: 1.8;
+}
+
+.warn-box {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red);
+  text-align: center;
+  background: #fff9c4;
+  padding: 12px 14px;
+  margin: 0 14px 20px;
+  border-radius: 8px;
+  border: 2px solid #f9a825;
+}
+
+@media (min-width: 768px) {
+  .info-box {
+    margin: 0 32px 24px;
+    font-size: 15px;
+    padding: 16px 20px;
+  }
+
+  .warn-box {
+    margin: 0 32px 24px;
+    font-size: 14px;
+    padding: 14px 20px;
+  }
 }
