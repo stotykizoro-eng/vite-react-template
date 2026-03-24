@@ -1,0 +1,147 @@
+/* ===== トップバー ===== */
+.top-bar {
+  background: var(--navy);
+  color: var(--yellow);
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  background: var(--navy);
+  padding: 14px 20px 0;
+  text-align: center;
+}
+
+.header-logo {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.header-name {
+  color: var(--yellow);
+  font-size: 34px;
+  font-weight: 900;
+  margin-top: 2px;
+}
+
+.header-tagline {
+  margin-top: 8px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+  padding: 6px 0;
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 28px 16px 16px;
+  text-align: center;
+}
+
+.footer-name {
+  color: var(--yellow);
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.footer address {
+  font-style: normal;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  line-height: 2;
+}
+
+.area-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 11px;
+}
+
+.tag-r {
+  background: var(--red);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tag-y {
+  background: var(--yellow);
+  color: var(--navy);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer-hours {
+  font-size: 12px;
+  opacity: 0.8;
+  line-height: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 10px;
+}
+
+/* サービスページ用フッター（コンパクト） */
+.footer-sm {
+  background: var(--navy);
+  color: #fff;
+  padding: 24px 16px 14px;
+  text-align: center;
+}
+
+.footer-sm .footer-name {
+  font-size: 20px;
+}
+
+.footer-sm address {
+  font-style: normal;
+  font-size: 13px;
+  opacity: 0.85;
+  line-height: 2;
+}
+
+/* ===== 固定電話バー ===== */
+.phone-fix {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 520px;
+  background: var(--yellow);
+  color: var(--navy);
+  text-align: center;
+  padding: 14px 0;
+  font-size: 22px;
+  font-weight: 900;
+  text-decoration: none;
+  border-top: 3px solid var(--navy);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phone-fix .ph-inner {
+  line-height: 1.2;
+}
+
+.phone-fix small {
+  font-size: 12px;
+  display: block;
+  font-weight: 700;
+  opacity: 0.8;
+}

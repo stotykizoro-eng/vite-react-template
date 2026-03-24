@@ -1,0 +1,82 @@
+:root {
+  --navy: #001f3f;
+  --red: #c62828;
+  --yellow: #ffc107;
+  --off: #f8f6f0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #bbb;
+  color: #222;
+  line-height: 1.7;
+  padding-bottom: 90px;
+}
+
+.page-wrap {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* セクションタイトル（共通） */
+.sec-title {
+  text-align: center;
+  padding: 22px 16px 8px;
+}
+
+.sec-title .en {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  color: var(--red);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.sec-title h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-top: 3px;
+  display: inline-block;
+}
+
+.sec-title h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--yellow);
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+/* サービスページ用セクションタイトル */
+.sec-title-sm {
+  text-align: center;
+  padding: 18px 16px 6px;
+}
+
+.sec-title-sm .en {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  color: var(--red);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.sec-title-sm h2 {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-top: 3px;
+}
