@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import './styles/global.css';
 import './styles/layout.css';
 import './styles/components.css';
@@ -15,6 +16,7 @@ import Bohan from './pages/Bohan';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/glass" element={<Glass />} />
