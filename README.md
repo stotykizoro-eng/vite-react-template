@@ -1,90 +1,42 @@
-# React + Vite + Hono + Cloudflare Workers
+# miyaitahp / vite-react-template
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/vite-react-template)
+このリポジトリは、React + Vite + Cloudflare Workers で構成された、サービス紹介型のシングルページアプリ寄りな Web サイトです。  
+実際の画面は React Router でページを切り替え、Cloudflare Workers 側は `/api/` の最小エンドポイントを持つ構成になっています。
 
-This template provides a minimal setup for building a React application with TypeScript and Vite, designed to run on Cloudflare Workers. It features hot module replacement, ESLint integration, and the flexibility of Workers deployments.
+このプロジェクトを今後運用しやすくするため、日本語の分析ドキュメントを追加しました。
 
-![React + TypeScript + Vite + Cloudflare Workers](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public)
+## まず読むファイル
 
-<!-- dash-content-start -->
+- [docs/project-analysis-ja.md](docs/project-analysis-ja.md)
 
-🚀 Supercharge your web development with this powerful stack:
+このドキュメントは、IT に詳しくない管理者の方向けの更新ガイドです。以下をまとめています。
 
-- [**React**](https://react.dev/) - A modern UI library for building interactive interfaces
-- [**Vite**](https://vite.dev/) - Lightning-fast build tooling and development server
-- [**Hono**](https://hono.dev/) - Ultralight, modern backend framework
-- [**Cloudflare Workers**](https://developers.cloudflare.com/workers/) - Edge computing platform for global deployment
+- プロジェクト全体の流れ
+- 主要ファイルの役割
+- 文言変更時の編集箇所
+- 画像を追加する時の進め方
+- 細かな仕様変更に対応する時の見方
+- 現状の注意点
 
-### ✨ Key Features
-
-- 🔥 Hot Module Replacement (HMR) for rapid development
-- 📦 TypeScript support out of the box
-- 🛠️ ESLint configuration included
-- ⚡ Zero-config deployment to Cloudflare's global network
-- 🎯 API routes with Hono's elegant routing
-- 🔄 Full-stack development setup
-- 🔎 Built-in Observability to monitor your Worker
-
-Get started in minutes with local development or deploy directly via the Cloudflare dashboard. Perfect for building modern, performant web applications at the edge.
-
-<!-- dash-content-end -->
-
-## Getting Started
-
-To start a new project with this template, run:
-
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/vite-react-template
-```
-
-A live deployment of this template is available at:
-[https://react-vite-template.templates.workers.dev](https://react-vite-template.templates.workers.dev)
-
-## Development
-
-Install dependencies:
+## 開発コマンド
 
 ```bash
 npm install
-```
-
-Start the development server with:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at [http://localhost:5173](http://localhost:5173).
-
-## Production
-
-Build your project for production:
+ビルド確認:
 
 ```bash
 npm run build
 ```
 
-Preview your build locally:
+Lint:
 
 ```bash
-npm run preview
+npm run lint
 ```
 
-Deploy your project to Cloudflare Workers:
+## 現状の補足
 
-```bash
-npm run build && npm run deploy
-```
-
-Monitor your workers:
-
-```bash
-npx wrangler tail
-```
-
-## Additional Resources
-
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Documentation](https://reactjs.org/)
-- [Hono Documentation](https://hono.dev/)
+複数のファイルで文字化けした日本語が含まれているため、文言修正や SEO 調整を進める前に、文字列の整理を一度行うのがおすすめです。詳細は [docs/project-analysis-ja.md](docs/project-analysis-ja.md) に記載しています。
