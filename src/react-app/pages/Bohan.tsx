@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Bohan() {
   return (
     <PageLayout>
+      <MetaTags
+        title="防犯・二重窓（内窓）｜宮口板硝子 川口市"
+        description="川口市の防犯・断熱リフォーム専門。防犯ガラス交換・内窓（二重窓）設置・防犯フィルム施工。補助金対応。見積無料。☎090-8563-7982"
+        path="/bohan"
+      />
       <BackHome />
 
       <PageHero

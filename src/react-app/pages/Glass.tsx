@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import EmergencyBar from '../components/EmergencyBar';
 import KomikomiBadge from '../components/KomikomiBadge';
@@ -9,6 +10,11 @@ import Footer from '../components/Footer';
 export default function Glass() {
   return (
     <PageLayout>
+      <MetaTags
+        title="ガラス修理・交換｜宮口板硝子 川口市 当日対応"
+        description="川口市のガラス修理・交換専門。割れたガラスを基本当日交換。透明・型・網入り・ペアガラスすべて対応。見積無料。☎090-8563-7982"
+        path="/glass"
+      />
       <BackHome />
 
       <PageHero

@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import BackHome from '../components/BackHome';
+import MetaTags from '../components/MetaTags';
 import PageHero from '../components/PageHero';
 import KomikomiBadge from '../components/KomikomiBadge';
 import TelButton from '../components/TelButton';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 export default function Shoji() {
   return (
     <PageLayout>
+      <MetaTags
+        title="障子・襖の張り替え｜宮口板硝子 川口市"
+        description="川口市の障子・襖の張替専門。黄ばみ・穴・破れを一新。法事・お正月・引越し前にも人気。まとめ割あり。見積無料。☎090-8563-7982"
+        path="/shoji"
+      />
       <BackHome />
 
       <PageHero
