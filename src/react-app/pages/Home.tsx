@@ -185,6 +185,15 @@ export default function Home() {
         </Link>
       </div>
 
+      {/* ナビリンクバー */}
+      <nav className="nav-links-bar">
+        <Link to="/price" className="nav-link-item">💴 料金一覧</Link>
+        <Link to="/area" className="nav-link-item">🗺️ エリア</Link>
+        <Link to="/faq" className="nav-link-item">❓ よくある質問</Link>
+        <Link to="/works" className="nav-link-item">🏗️ 施工実績</Link>
+        <Link to="/compare" className="nav-link-item">⚖️ 業者比較</Link>
+      </nav>
+
       {/* 悪徳業者注意（コンパクト版） */}
       <div className="warn-note">
         <div className="warn-note-title">⚠️ 格安業者にご注意ください</div>
@@ -294,9 +303,12 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="home-faq-section">
-        <div className="sec-title" style={{ paddingTop: '6px' }}>
-          <span className="en">FAQ</span>
-          <h2>よくあるご質問</h2>
+        <div className="home-preview-header">
+          <div className="sec-title" style={{ paddingTop: '6px', marginBottom: 0 }}>
+            <span className="en">FAQ</span>
+            <h2>よくあるご質問</h2>
+          </div>
+          <Link to="/faq" className="home-preview-link">すべて見る →</Link>
         </div>
         <div className="home-faq-list">
           <details className="home-faq-item">
@@ -311,15 +323,38 @@ export default function Home() {
             <summary>❓ 網戸1枚・ガラス1枚だけでも来てもらえますか？</summary>
             <p>もちろんです。<strong>1枚から</strong>お伺いしています。「こんな小さなことで…」という遠慮は不要です。50年間ずっと地域に寄り添ってきました。</p>
           </details>
-          <details className="home-faq-item">
-            <summary>❓ 川口市外（さいたま市・東京都内）からも依頼できますか？</summary>
-            <p>はい、お伺いしています。さいたま市・蕨市・越谷市・草加市・東京北区・足立区・板橋区など、川口市周辺・都内へも出張対応しております。出張費込みの見積もりを無料でお出しします。</p>
-          </details>
-          <details className="home-faq-item">
-            <summary>❓ 賃貸物件でもガラス修理や窓の修理を依頼できますか？</summary>
-            <p>はい、賃貸物件でも対応可能です。費用の負担が管理会社・オーナー側になる場合もありますので、事前に管理会社へご確認されることをおすすめします。<strong>見積書の発行も無料</strong>で行います。</p>
-          </details>
         </div>
+        <Link to="/faq" className="show-more-btn" style={{ display: 'block', textDecoration: 'none', textAlign: 'center' }}>
+          ❓ よくある質問をもっと見る（全20問）
+        </Link>
+      </section>
+
+      {/* 施工実績プレビュー */}
+      <section className="home-preview-section">
+        <div className="home-preview-header">
+          <div className="sec-title" style={{ marginBottom: 0 }}>
+            <span className="en">Works</span>
+            <h2>🏗️ 施工実績</h2>
+          </div>
+          <Link to="/works" className="home-preview-link">一覧を見る →</Link>
+        </div>
+        <div className="works-preview-cards">
+          <div className="works-preview-card">
+            <span className="works-tag">ガラス修理</span>
+            <p>川口市 ／ 子どもが割った透明ガラスを電話から1時間で当日交換<span className="works-result-note">¥12,000（込み込み）</span></p>
+          </div>
+          <div className="works-preview-card">
+            <span className="works-tag">網戸張替</span>
+            <p>さいたま市 ／ 猫が穴を開けた3枚を花粉対策ネットに張替え<span className="works-result-note">¥16,500（3枚・込み込み）</span></p>
+          </div>
+          <div className="works-preview-card">
+            <span className="works-tag">内窓設置</span>
+            <p>足立区 ／ 道路沿いの騒音・結露が内窓設置で解決。補助金も活用<span className="works-result-note">工期1日</span></p>
+          </div>
+        </div>
+        <Link to="/works" className="show-more-btn" style={{ display: 'block', textDecoration: 'none', textAlign: 'center' }}>
+          🏗️ 施工実績をもっと見る
+        </Link>
       </section>
 
       {/* Googleマップ誘導 + 協力業者（コンパクト） */}

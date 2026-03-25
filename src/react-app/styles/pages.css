@@ -1,0 +1,708 @@
+/* =============================================
+   pages.css — 新ページ・コンポーネント専用スタイル
+   ============================================= */
+
+/* =============================================
+   ContactForm
+   ============================================= */
+.contact-form-wrap {
+  margin: 0 14px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-title {
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 15px;
+  font-weight: 900;
+  padding: 9px 14px;
+}
+
+.contact-form {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cf-label {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.cf-required {
+  color: var(--red);
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+.cf-input,
+.cf-textarea {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cf-input:focus,
+.cf-textarea:focus {
+  border-color: var(--navy);
+}
+
+.cf-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.cf-error {
+  font-size: 13px;
+  color: var(--red);
+  font-weight: 700;
+  padding: 4px 0;
+  background: #fff5f5;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+.cf-submit {
+  background: var(--yellow);
+  color: var(--navy);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100%;
+  transition: opacity 0.15s;
+}
+
+.cf-submit:hover {
+  opacity: 0.85;
+}
+
+.cf-note {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-form-wrap {
+    margin: 0 32px 24px;
+  }
+
+  .contact-form {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .cf-label {
+    font-size: 14px;
+  }
+
+  .cf-input,
+  .cf-textarea {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .cf-submit {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+/* =============================================
+   料金ページ — アンカーナビ
+   ============================================= */
+.price-service-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 10px 14px 14px;
+  background: var(--off);
+  border-bottom: 2px solid #e0ddd8;
+}
+
+.price-nav-item {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.price-nav-item:hover {
+  background: #003080;
+}
+
+.price-section-anchor {
+  display: block;
+  height: 0;
+  margin-top: -60px;
+  padding-top: 60px;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .price-service-nav {
+    padding: 12px 48px 16px;
+    gap: 8px;
+  }
+
+  .price-nav-item {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+/* =============================================
+   エリアページ
+   ============================================= */
+.area-city-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 14px 16px;
+}
+
+.area-city-card {
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  padding: 12px;
+  position: relative;
+}
+
+.area-city-name {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.area-city-detail {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.area-primary-badge {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.area-secondary-badge {
+  display: inline-block;
+  background: #888;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.area-map-placeholder {
+  margin: 0 14px 16px;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.area-map-placeholder strong {
+  display: block;
+  font-size: 16px;
+  color: var(--navy);
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .area-city-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 0 48px 20px;
+  }
+
+  .area-city-card {
+    padding: 14px;
+  }
+
+  .area-city-name {
+    font-size: 16px;
+  }
+
+  .area-city-detail {
+    font-size: 12px;
+  }
+
+  .area-map-placeholder {
+    margin: 0 48px 20px;
+    padding: 32px 24px;
+    font-size: 15px;
+  }
+}
+
+/* =============================================
+   FAQページ — カテゴリ
+   ============================================= */
+.faq-category-wrap {
+  margin-bottom: 8px;
+}
+
+.faq-category-title {
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: 900;
+  padding: 8px 14px;
+  margin: 0 14px 2px;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 768px) {
+  .faq-category-title {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0 48px 2px;
+  }
+}
+
+/* =============================================
+   施工実績ページ
+   ============================================= */
+.works-list {
+  padding: 0 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.works-card {
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.works-card-head {
+  background: var(--navy);
+  color: #fff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.works-area {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.works-tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.works-summary {
+  padding: 10px 12px 6px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.works-result {
+  padding: 0 12px 10px;
+  font-size: 12px;
+  color: #555;
+  border-top: 1px solid #eee;
+  margin-top: 6px;
+  padding-top: 8px;
+}
+
+.works-result strong {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.testimonial-grid {
+  padding: 0 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .works-list {
+    padding: 0 48px 12px;
+    gap: 14px;
+  }
+
+  .works-card-head {
+    padding: 10px 16px;
+  }
+
+  .works-summary {
+    padding: 12px 16px 8px;
+    font-size: 14px;
+  }
+
+  .works-result {
+    padding: 8px 16px 12px;
+    font-size: 13px;
+  }
+
+  .testimonial-grid {
+    padding: 0 48px 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* =============================================
+   比較ページ
+   ============================================= */
+.compare-table-wrap {
+  margin: 0 14px 16px;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 320px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.compare-table th {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.compare-row-label {
+  background: var(--off);
+  text-align: left !important;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.compare-th-us {
+  background: var(--navy);
+  color: var(--yellow);
+  min-width: 110px;
+}
+
+.compare-th-net {
+  background: #666;
+  color: #fff;
+  min-width: 110px;
+}
+
+.compare-good {
+  background: #f0fff4;
+  color: #1a7a3a;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.compare-bad {
+  background: #fff5f5;
+  color: #c62828;
+  font-size: 14px;
+}
+
+.compare-neutral {
+  background: #fffde7;
+  color: #b07d00;
+  font-size: 13px;
+}
+
+.compare-points {
+  padding: 0 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.compare-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.compare-point-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.compare-point-text {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.compare-point-text strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+
+.compare-cta-block {
+  margin: 0 14px 20px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.compare-cta-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.compare-cta-block .compare-cta-sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .compare-table-wrap {
+    margin: 0 48px 20px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .compare-table th {
+    font-size: 14px;
+  }
+
+  .compare-points {
+    padding: 0 48px 20px;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .compare-point-item {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .compare-cta-block {
+    margin: 0 48px 24px;
+    padding: 20px;
+  }
+
+  .compare-cta-block p {
+    font-size: 15px;
+  }
+}
+
+/* =============================================
+   ホームページ — ナビリンクバー
+   ============================================= */
+.nav-links-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: var(--off);
+  border-top: 2px solid #e0ddd8;
+  border-bottom: 2px solid #e0ddd8;
+}
+
+.nav-links-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 13px;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.nav-link-item:hover {
+  background: #003080;
+}
+
+@media (min-width: 768px) {
+  .nav-links-bar {
+    padding: 14px 48px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 10px;
+  }
+
+  .nav-link-item {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+/* =============================================
+   ホームページ — プレビューセクション（施工実績）
+   ============================================= */
+.home-preview-section {
+  padding-bottom: 8px;
+}
+
+.home-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  margin-bottom: 8px;
+}
+
+.home-preview-header .sec-title {
+  margin: 0;
+}
+
+.home-preview-link {
+  font-size: 13px;
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  padding-left: 8px;
+}
+
+.home-preview-link:hover {
+  text-decoration: underline;
+}
+
+.works-preview-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 14px 12px;
+}
+
+.works-preview-card {
+  background: #fff;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.works-preview-card .works-tag {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.works-preview-card p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.works-preview-card .works-result-note {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  margin-top: 3px;
+}
+
+@media (min-width: 768px) {
+  .home-preview-header {
+    padding: 0 48px;
+  }
+
+  .works-preview-cards {
+    padding: 0 48px 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .works-preview-card {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 14px;
+  }
+}
